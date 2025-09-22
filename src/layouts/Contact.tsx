@@ -1,27 +1,53 @@
-import React from 'react';
-import { TextField, Button } from '@mui/material';
+import React from "react";
+import { TextField, Button } from "@mui/material";
 
 const Contact: React.FC = () => {
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-md flex flex-wrap gap-6 justify-center">
+    <div className="max-w-6xl mx-auto p-8 bg-gradient-to-r from-gray-50 to-white rounded-2xl shadow-xl grid md:grid-cols-2 gap-10">
       {/* Thông tin liên hệ */}
-      <div className="w-full md:w-1/2 space-y-4">
-        <h2 className="text-xl font-bold text-gray-800">THÔNG TIN LIÊN HỆ</h2>
-        <p className="text-gray-600">
-          DT SHOP xin hân hạnh phục vụ quý khách với những bộ sách rất nhiều khách hàng tại Việt Nam ưa thích và chọn lựa.
+      <div className="space-y-6">
+        <h2 className="text-2xl font-extrabold text-gray-900 tracking-wide">
+          THÔNG TIN LIÊN HỆ
+        </h2>
+        <p className="text-gray-600 leading-relaxed">
+          <span className="font-semibold text-gray-800">DT SHOP</span> luôn sẵn
+          sàng phục vụ quý khách với những bộ sách được nhiều khách hàng tại Việt Nam tin tưởng và lựa chọn.
         </p>
-        <div className="space-y-2">
-          <p><strong>📍 Địa chỉ:</strong> Ha Noi, Viet Nam</p>
-          <p><strong>📞 Phone:</strong> <a href="tel:0123456789" className="text-blue-600">0123456789</a></p>
-          <p><strong>✉️ Email:</strong> <a href="mailto:abc@gmail.com" className="text-blue-600">abc@gmail.com</a></p>
+
+        <div className="space-y-4 text-gray-700">
+          <div className="flex items-center gap-3 p-3 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition">
+            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-red-100 text-red-600 font-bold">
+              A
+            </div>
+            <span>Ha Noi, Viet Nam</span>
+          </div>
+
+          <div className="flex items-center gap-3 p-3 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition">
+            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-600 font-bold">
+              P
+            </div>
+            <a href="tel:0123456789" className="hover:underline">
+              0123456789
+            </a>
+          </div>
+
+          <div className="flex items-center gap-3 p-3 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition">
+            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold">
+              E
+            </div>
+            <a href="mailto:abc@gmail.com" className="hover:underline">
+              abc@gmail.com
+            </a>
+          </div>
         </div>
       </div>
 
       {/* Form gửi thông tin */}
-      <div className="w-full md:w-1/2">
-        <h2 className="text-xl font-bold text-gray-800">GỬI THÔNG TIN</h2>
-        <p className="text-gray-600 mb-4">
-          Bạn hãy điền nội dung tin nhắn vào form dưới đây và gửi cho chúng tôi. Chúng tôi sẽ trả lời bạn sau khi nhận được.
+      <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">GỬI THÔNG TIN</h2>
+        <p className="text-gray-600 mb-6 text-sm">
+          Vui lòng điền nội dung tin nhắn bên dưới. Chúng tôi sẽ phản hồi sớm
+          nhất có thể.
         </p>
         <form className="space-y-4">
           <TextField
@@ -59,10 +85,17 @@ const Contact: React.FC = () => {
             type="submit"
             fullWidth
             variant="contained"
-            color="primary"
-            className="bg-black text-white hover:bg-gray-800"
+            sx={{
+              py: 1.5,
+              fontWeight: "bold",
+              borderRadius: "0.75rem",
+              background: "linear-gradient(to right, #2563eb, #1e40af)",
+              "&:hover": {
+                background: "linear-gradient(to right, #1d4ed8, #1e3a8a)",
+              },
+            }}
           >
-            Gửi tin nhắn →
+            Gửi tin nhắn
           </Button>
         </form>
       </div>

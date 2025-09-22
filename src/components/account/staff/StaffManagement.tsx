@@ -3,7 +3,7 @@ import { toast, ToastContainer } from 'react-toastify'
 import Pagination from '../../common/Pagination'
 import { CiEdit } from 'react-icons/ci'
 import { MdDeleteForever } from 'react-icons/md'
-import { TbCategory } from 'react-icons/tb'
+//import { TbCategory } from 'react-icons/tb'
 import { Link, useNavigate } from 'react-router-dom'
 import { Avatar, Switch } from '@mui/material'
 import Swal from 'sweetalert2'
@@ -92,7 +92,7 @@ const StaffManagement: React.FC = () => {
             {/* Tiêu đề */}
             <div className="mb-4">
                 <h1 className="text-4xl font-bold flex items-center text-blue-600">
-                    <TbCategory className='mr-4 text-blue-700' />
+                    {/* <TbCategory className='mr-4 text-blue-700' /> */}
                     Quản lý nhân viên
                 </h1>
             </div>

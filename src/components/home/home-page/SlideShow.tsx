@@ -8,7 +8,7 @@ const Slideshow: React.FC = () => {
     <section className="mt-3 px-2" >
       <Carousel showThumbs={false} autoPlay infiniteLoop>
         <div>
-          <img src="./assets/img/slideshow/1.png" alt="Los Angeles" />
+          <img src="./assets/img/slideshow/6.png" alt="Los Angeles" />
           <div className="absolute bottom-5 text-center" style={{ paddingLeft: "70%", paddingBottom: "10%" }}>
             <Link to="/product-page" className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
               Xem chi tiết
