@@ -24,10 +24,14 @@ const TopProductList: React.FC = () => {
     const navigate = useNavigate();
 
     const getAllProductVariant = async () => {
-        const response = await getTopSellingProducts();
-        console.log(response.data);
-
-        setProducts(response.data);
+         try {
+    const response = await getTopSellingProducts();
+    console.log("URL gọi:", `${process.env.REACT_APP_BASE_URL}/api/products/top-selling`);
+    console.log("Kết quả:", response.data);
+    setProducts(response.data);
+  } catch (err) {
+    console.error("Lỗi:", err);
+  }
     }
 
     const addProductToCart = async (productVariantId: number, e: React.MouseEvent) => {

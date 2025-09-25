@@ -28,6 +28,7 @@ const ProductList: React.FC = () => {
         try {
             setIsLoading(true);
             const response = await getAllProductVariantDefaults('', 0, 4, '', '');
+            console.log('res product',response);
             setProducts(response.data.content);
             setIsLoading(false);
         } catch (error) {
