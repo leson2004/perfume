@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ManagerHeader from '../manager/ManagerHeader';
+//import ManagerHeader from '../manager/ManagerHeader';
 import Header from '../../layouts/Header';
 import Footer from '../../layouts/Footer';
 import { useLocation } from 'react-router-dom';
@@ -22,7 +22,7 @@ const Home: React.FC<HomeProps> = ({ children }) => {
 
   return (
     <div className="pt-16">
-      <ManagerHeader toggleSidebar={() => {}} />
+      {/* <ManagerHeader toggleSidebar={() => {}} /> */}
       {
         !shouldHideHeader ? <Header /> : null
       }

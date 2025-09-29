@@ -24,8 +24,10 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script> window.chtlConfig = { chatbotId: "1743961573" } </script>
-    <script async data-id="1743961573" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+    <script> window.chtlConfig = { chatbotId: "3999211591", metadata: {
+      accessToken: localStorage.getItem("accessToken") // truyền token user đã lưu
+    } } </script>
+<script async data-id="3999211591" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   </body>
 </html>

@@ -36,7 +36,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
                 <h2 className="text-2xl font-semibold mb-6 text-center tracking-wide">Bảng Điều Khiển</h2>
 
                 <img
-                    src="https://media.istockphoto.com/id/1406611044/vi/vec-to/thi%E1%BA%BFt-k%E1%BA%BF-logo-chai-n%C6%B0%E1%BB%9Bc-hoa-sang-tr%E1%BB%8Dng-minh-h%E1%BB%8Da-cho-m%E1%BB%B9-ph%E1%BA%A9m-l%C3%A0m-%C4%91%E1%BA%B9p-th%E1%BA%A9m-m%E1%BB%B9-vi%E1%BB%87n-s%E1%BA%A3n-ph%E1%BA%A9m.jpg?s=612x612&w=0&k=20&c=R6pze5UeNvGGQtJpRViiS9YlLduaF7HahXuVDuxhgnk="
+                    src="/assets/img/logo/logo_perfume.png"
                     alt="Logo"
                     className="w-40 h-40 object-cover mx-auto rounded-full border-4 border-white shadow-md mb-6"
                 />

@@ -1,68 +1,110 @@
-import React from 'react';
+import React from "react";
+import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
 const Footer: React.FC = () => {
-    return (
-        <footer className="bg-gray-100 text-gray-700 py-10 px-6">
-    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+  return (
+    <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-300 py-12 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Logo & Contact */}
+        <div className="space-y-5 text-center md:text-left">
+          <div className="flex justify-center md:justify-start">
+            <img
+              src="/assets/img/logo/logo_perfume.png"
+              alt="Logo"
+              className="w-16 h-16 rounded-full shadow-lg border border-gray-600 hover:scale-110 transition-transform duration-300 cursor-pointer"
+            />
+          </div>
+          <p className="text-sm">
+            <strong>Địa chỉ:</strong> Triệu Sơn, Thanh Hóa
+          </p>
+          <p className="text-sm">
+            <strong>Điện thoại:</strong> 012345678
+          </p>
+          <p className="text-sm">
+            <strong>Email:</strong> abc@gmail.com
+          </p>
+          <div className="flex justify-center md:justify-start space-x-3 pt-3">
+            {[FaFacebookF, FaInstagram, FaYoutube, FaTwitter].map(
+              (Icon, idx) => (
+                <a
+                  key={idx}
+                  href="#"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-500 transition"
+                >
+                  <Icon className="text-white text-lg" />
+                </a>
+              )
+            )}
+          </div>
+        </div>
+
+        {/* Links */}
+        <div className="grid grid-cols-2 gap-8 text-center md:text-left">
+          <div className="space-y-3">
+            <h3 className="text-lg font-semibold text-orange-400 uppercase">
+              Về chúng tôi
+            </h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Giới thiệu
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Sản phẩm
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Liên hệ
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-3">
+            <h3 className="text-lg font-semibold text-orange-400 uppercase">
+              Chính sách
+            </h3>
+            <ul className="space-y-2 text-sm">
+              <li>Đổi trả & Hoàn tiền</li>
+              <li>Thanh toán & Giao hàng</li>
+              <li>Bảo mật thông tin</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Newsletter */}
         <div className="space-y-4 text-center md:text-left">
-            <div className="flex justify-center md:justify-start">
-                <img
-                    src="./assets/img/logo/logo_perfume.png"
-                    alt="Logo"
-                    className="w-14 h-14 rounded-full shadow-md border-2 border-gray-300 cursor-pointer hover:scale-110 transition-transform duration-300"
-                />
-            </div>
-            <div className="text-sm leading-relaxed space-y-1">
-                <p><strong>Địa chỉ:</strong> Triệu Sơn, Thanh Hóa </p>
-                <p><strong>Điện thoại:</strong> 012345678</p>
-                <p><strong>Email:</strong> abc@gmail.com</p>
-            </div>
-            <div className="flex justify-center md:justify-start space-x-4 mt-3">
-                <a href="#" className="text-gray-500 hover:text-orange-500 text-xl"><i className="fab fa-facebook"></i></a>
-                <a href="#" className="text-gray-500 hover:text-orange-500 text-xl"><i className="fab fa-instagram"></i></a>
-                <a href="#" className="text-gray-500 hover:text-orange-500 text-xl"><i className="fab fa-youtube"></i></a>
-                <a href="#" className="text-gray-500 hover:text-orange-500 text-xl"><i className="fab fa-twitter"></i></a>
-            </div>
+          <h3 className="text-lg font-semibold text-orange-400 uppercase">
+            Nhận tin khuyến mãi
+          </h3>
+          <p className="text-sm text-gray-400">
+            Đăng ký email để nhận ưu đãi độc quyền và cập nhật mới nhất.
+          </p>
+          <form className="flex flex-col sm:flex-row items-center gap-3">
+            <input
+              type="email"
+              placeholder="Nhập email của bạn"
+              className="w-full px-4 py-2 rounded-lg focus:outline-none text-gray-900"
+            />
+            <button
+              type="submit"
+              className="px-5 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition"
+            >
+              Đăng ký
+            </button>
+          </form>
         </div>
+      </div>
 
-        {/* Info */}
-        <div className="space-y-3 text-center md:text-left">
-            <h3 className="text-lg font-semibold text-orange-500 uppercase">Thông tin của chúng tôi</h3>
-            <p>Cơ sở 1: Triệu Sơn, Thanh Hóa </p>
-            <p>Lĩnh vực kinh doanh: Mỹ phẩm, chăm sóc sắc đẹp</p>
-        </div>
-
-        {/* Policies */}
-        <div className="space-y-3 text-center md:text-left">
-            <h3 className="text-lg font-semibold text-orange-500 uppercase">Chính sách</h3>
-            <ul className="space-y-1 text-sm">
-                <li>Chính sách bảo hành</li>
-                <li>Chính sách đổi trả</li>
-                <li>Chính sách thanh toán</li>
-                <li>Chính sách giao hàng</li>
-                <li>Chính sách bảo mật</li>
-            </ul>
-        </div>
-
-        {/* Support */}
-        <div className="space-y-3 text-center md:text-left">
-            <h3 className="text-lg font-semibold text-orange-500 uppercase">Hỗ trợ chung</h3>
-            <ul className="space-y-1 text-sm">
-                <li>Trang chủ</li>
-                <li>Giới thiệu</li>
-                <li>Sản phẩm</li>
-                <li>Liên hệ</li>
-            </ul>
-        </div>
-    </div>
-
-    <div className="border-t border-gray-300 mt-10 pt-4 text-center text-sm text-gray-500">
-        &copy; {new Date().getFullYear()} Công ty TNHH XYZ. Bảo lưu mọi quyền.
-    </div>
-</footer>
-
-    );
+      {/* Bottom */}
+      <div className="border-t border-gray-700 mt-10 pt-5 text-center text-sm text-gray-500">
+        &copy; {new Date().getFullYear()} SMTA Perfume. All rights reserved.
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
